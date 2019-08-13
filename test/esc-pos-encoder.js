@@ -170,18 +170,18 @@ describe('EscPosEncoder', function() {
         });
     });
 
-    // describe('image(canvas, 8, 8) - with a black pixel at 0,0', function () {
-    //     let canvas = new Canvas(8, 8);
-    //     let context = canvas.getContext('2d');
-    //     context.fillStyle = 'rgba(0, 0, 0, 1)';
-    //     context.fillRect( 0, 0, 1, 1 );
+    describe('image(canvas, 8, 8) - with a black pixel at 0,0', function () {
+        let canvas = new Canvas(8, 8);
+        let context = canvas.getContext('2d');
+        context.fillStyle = 'rgba(0, 0, 0, 1)';
+        context.fillRect( 0, 0, 1, 1 );
 
-    //     let result = encoder.image(canvas, 8, 8).encode();
+        let result = encoder.image(canvas, 8, 8).encode();
                 
-    //     it('should be [ 29, 118, 48, 0, 1, 0, 8, 0, 128, 0, 0, 0, 0, 0, 0, 0 ]', function () {
-    //         assert.deepEqual(new Uint8Array([ 29, 118, 48, 0, 1, 0, 8, 0, 128, 0, 0, 0, 0, 0, 0, 0 ]), result);
-    //     });
-    // });
+        it('should be [ 29, 118, 48, 0, 1, 0, 8, 0, 128, 0, 0, 0, 0, 0, 0, 0 ]', function () {
+            assert.deepEqual(new Uint8Array([ 29, 118, 48, 0, 1, 0, 8, 0, 128, 0, 0, 0, 0, 0, 0, 0 ]), result);
+        });
+    });
 
     describe('cut()', function () {
         let result = encoder.cut().encode();
