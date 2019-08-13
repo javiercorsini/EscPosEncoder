@@ -235,7 +235,7 @@ The fifth paramter is the threshold that will be used by the threshold and bayer
     
     img.onload = function() {
         let result = encoder
-            .image(img, 300, 300, 'atkinson')
+            .image(img, 256, 256, 'atkinson')
             .encode()
     }
 
